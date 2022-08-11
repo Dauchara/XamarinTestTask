@@ -49,11 +49,11 @@ namespace XamarinTestTask.ViewModels
 
         private async void OnSave()
         {
-            Item newItem = new Item()
+            ExchangeRateModel newItem = new ExchangeRateModel()
             {
-                Id = Guid.NewGuid().ToString(),
-                Text = Text,
-                Description = Description
+                Cur_ID = 0,
+                Cur_Abbreviation = Text,
+                Cur_Name = Description
             };
 
             await DataStore.AddItemAsync(newItem);
