@@ -51,7 +51,7 @@ namespace XamarinTestTask.Services
             return await Task.FromResult(true);
         }
 
-        public async Task<bool> DeleteItemAsync(int id)
+        public async Task<bool> DeleteItemAsync(string id)
         {
             var oldItem = items.Where((ExchangeRateModel arg) => arg.Cur_ID == id).FirstOrDefault();
             items.Remove(oldItem);
@@ -59,7 +59,7 @@ namespace XamarinTestTask.Services
             return await Task.FromResult(true);
         }
 
-        public async Task<ExchangeRateModel> GetItemAsync(int id)
+        public async Task<ExchangeRateModel> GetItemAsync(string id)
         {
             return await Task.FromResult(items.FirstOrDefault(s => s.Cur_ID == id));
         }

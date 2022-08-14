@@ -9,10 +9,10 @@ namespace XamarinTestTask.ViewModels
     [QueryProperty(nameof(ItemId), nameof(ItemId))]
     public class ItemDetailViewModel : BaseViewModel
     {
-        private int itemId;
+        private string itemId;
         private string text;
         private string description;
-        public int Id { get; set; }
+        public string Id { get; set; }
 
         public string Text
         {
@@ -26,7 +26,7 @@ namespace XamarinTestTask.ViewModels
             set => SetProperty(ref description, value);
         }
 
-        public int ItemId
+        public string ItemId
         {
             get
             {
@@ -39,7 +39,7 @@ namespace XamarinTestTask.ViewModels
             }
         }
 
-        public async void LoadItemId(int itemId)
+        public async void LoadItemId(string itemId)
         {
             try
             {
