@@ -51,7 +51,7 @@ namespace XamarinTestTask.ViewModels
         {
             ExchangeRateModel newItem = new ExchangeRateModel()
             {
-                Cur_ID = 0,
+                Cur_ID = "0",
                 Cur_Abbreviation = Text,
                 Cur_Name = Description
             };
