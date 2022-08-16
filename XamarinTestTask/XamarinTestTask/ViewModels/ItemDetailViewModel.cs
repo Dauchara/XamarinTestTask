@@ -44,9 +44,9 @@ namespace XamarinTestTask.ViewModels
             try
             {
                 var item = await DataStore.GetItemAsync(itemId);
-                Id = item.Id;
-                Text = item.Text;
-                Description = item.Description;
+                Id = item.Cur_ID;
+                Text = item.Cur_Abbreviation;
+                Description = item.Cur_Name;
             }
             catch (Exception)
             {
